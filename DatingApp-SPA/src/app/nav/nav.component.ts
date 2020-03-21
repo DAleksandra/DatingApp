@@ -29,6 +29,7 @@ export class NavComponent implements OnInit {
 
   logout() {
     localStorage.removeItem('token');
+    this.router.navigate(['']);
     this.alertify.message('logged out');
   }
 
@@ -38,7 +39,7 @@ export class NavComponent implements OnInit {
 
   loggedOut() {
     localStorage.removeItem('token');
-    this.router.navigate(['/home']);
+    this.router.navigate(['']);
     console.log('looged out');
   }
 
